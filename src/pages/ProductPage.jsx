@@ -77,7 +77,9 @@ export default function ProductPage() {
       <main className="flex-1 pt-24">
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {/* Left Column - Product Details */}
+              <div className="order-2 lg:order-1">
               <div className="space-y-8">
                 <div>
                   <Badge variant="outline" className="mb-2 border-accent text-accent">Bestseller</Badge>
@@ -205,6 +207,17 @@ export default function ProductPage() {
 
                 <div className="text-center pt-4">
                   <p className="text-sm text-muted-foreground">Your information is safe with us. We use bank-grade security.</p>
+                </div>
+              </div>
+              
+              {/* Right Column - Product Image */}
+              <div className="order-1 lg:order-2 flex justify-center items-start">
+                <div className="w-full max-w-md">
+                  <img
+                    src={IMAGES.productMain}
+                    alt="SARIRA Fig Malt Pouch"
+                    className="w-full h-auto object-cover rounded-lg shadow-xl animate-floating"
+                  />
                 </div>
               </div>
             </div>
